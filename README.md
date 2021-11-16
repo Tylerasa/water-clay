@@ -4,4 +4,5 @@
 ## npm start
 
 
-![alt text](https://github.com/Tylerasa/water-clay/blob/main/image.jpg?raw=true)
+![alt text](https://github.com/Tylerasa/water-clay/blob/main/s1.png?raw=true)
+![alt text](https://github.com/Tylerasa/water-clay/blob/main/s2.png?raw=true)
