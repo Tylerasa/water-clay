@@ -1,12 +1,13 @@
 import React from "react";
+import ProductOptions from "./Product Options/ProductOptions";
 
 const ProductDetails = () => {
   const sizes = ["S", "M", "L", "XL", "3XL"];
   return (
     <div className="w-1/2 px-32 py-32">
       <div className="flex items-center justify-between">
-        <p style={{ fontSize: "2rem", fontWeight: "500" }}>UGLI Shirt</p>
-        <p style={{ fontSize: "2rem", fontWeight: "500" }}>$35</p>
+        <p style={{ fontSize: "2rem", fontWeight: "700" }}>UGLI Shirt</p>
+        <p style={{ fontSize: "2rem", fontWeight: "700" }}>$35</p>
       </div>
       <p className="text-gray-400 mt-5 mb-1 text-sm">COLOR</p>
       <div className="flex mb-6">
@@ -103,6 +104,7 @@ const ProductDetails = () => {
       >
         Add to cart
       </div>
+      <ProductOptions/>
     </div>
   );
 };
