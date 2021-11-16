@@ -68,7 +68,7 @@ const ProductDetails = () => {
                 textDecoration: i === 4 || i === 3 ? "line-through" : "none",
                 marginRight: "5px",
               }}
-              className="py-2 px-3"
+              className="py-2 px-3 cursor-pointer"
             >
               {ele}
             </div>
