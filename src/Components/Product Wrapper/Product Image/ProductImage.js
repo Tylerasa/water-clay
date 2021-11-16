@@ -2,13 +2,14 @@ import React, { useContext } from "react";
 import ImageSelector from "./Image Selector/ImageSelector";
 import { ImageContext } from "../../../context";
 const ProductImage = () => {
-  const {  images, imgPos } = useContext(ImageContext);
+  const {  image } = useContext(ImageContext);
   return (
     <div
       style={{
-        backgroundImage: `url(${images[imgPos]})`,
+        backgroundImage: `url(${image})`,
         backgroundSize: "contain",
         backgroundPosition: "center",
+        backgroundRepeat: "no-repeat"
       }}
       className="w-1/2 bg-imageBg"
     >

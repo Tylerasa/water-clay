@@ -1,11 +1,14 @@
 import './App.css';
 import ProductWrapper from './Components/Product Wrapper/ProductWrapper';
-
+import { ImageContext } from './context';
+import { useState} from 'react'
+import main from "./Components/assets/main.png";
 function App() {
+  const [image, setImage] = useState(main)
   return (
-    <div>
+    <ImageContext.Provider value={{image, setImage}}>
       <ProductWrapper/> 
-    </div>
+    </ImageContext.Provider>
   );
 }
 

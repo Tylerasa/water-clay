@@ -1,12 +1,11 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import main from "../../../assets/main.png";
 import side from "../../../assets/side.png";
 import { ImageContext } from "../../../../context";
 const ImageSelector = () => {
   const { setImage } = useContext(ImageContext);
-  console.log(setImage);
   const images = [main, side];
-
+  const [cur, setCur] = useState(0)
   return (
     <div
       style={{ width: "inherit" }}
@@ -17,10 +16,10 @@ const ImageSelector = () => {
           return (
             <img
               key={i}
-              onClick={() => setImage({ image: ele })}
+              onClick={() => {setImage(ele); setCur(i)}}
               className="cursor-pointer"
               src={ele}
-              style={{ border: i === 0 ? "solid 1px #000" : "none" }}
+              style={{ border: i === cur ? "solid 1px #000" : "none" }}
               width="50"
               height="50"
               alt={`${i}`}
@@ -36,7 +35,7 @@ const ImageSelector = () => {
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
-          padding: "8px"
+          padding: "8px",
         }}
         className="bg-pink-300 shadow-lg"
       >
@@ -53,7 +52,7 @@ const ImageSelector = () => {
           </defs>
           <text>
             <textPath style={{ fontSize: "16px" }} xlinkHref="#circle">
-              SALE 40% {"  "} SALE{" "}40% {"  "} SALE 40%{"  "} 
+              SALE 40% {"  "} SALE 40% {"  "} SALE 40%{"  "}
             </textPath>
           </text>
         </svg>
